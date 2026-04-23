@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Portofolio | Profil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-green: #6d8264;
+            --bambi-brown: #d4a373;
+            --soft-cream: #fdfaf5;
+            --vintage-earth: #4a3728;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--soft-cream);
+            margin: 0;
+            color: var(--vintage-earth);
+            overflow-x: hidden;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+                              url('https://www.transparenttextures.com/patterns/dust.png');
+        }
+
+        /* ANIMASI EMOJI JATUH */
+        .falling-emoji {
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            user-select: none;
+            cursor: default;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        header {
+            background-color: var(--forest-green);
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 25px;
+            position: relative;
+            border-bottom: 10px double #ffffff;
+        }
+
+        /* MOVING LOGO */
+        .moving-logo {
+            font-size: 50px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: rgba(109, 130, 100, 0.9);
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: 0.4s;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: var(--bambi-brown);
+        }
+
+        .container {
+            width: 80%;
+            max-width: 950px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 50px 0 50px 0;
+            box-shadow: 20px 20px 0px rgba(212, 163, 115, 0.2);
+            border: 1px solid #eee;
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--forest-green);
+            font-size: 2.2em;
+            border-left: 5px solid var(--bambi-brown);
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 2;
+            font-weight: 300;
+            color: #555;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .profile-photo img {
+            width: 230px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50% / 60%;
+            border: 12px solid #fff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.5s;
+        }
+
+        .profile-photo img:hover {
+            transform: rotate(3deg) scale(1.02);
+        }
+
+        footer {
+            background-color: var(--vintage-earth);
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section { flex-direction: column; text-align: center; }
+            .container { width: 90%; padding: 25px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="moving-logo">🦌</div>
+    <h1>Azkayra Adreena's profile</h1>
+    <p>Karya Nyata dari Proses Belajar</p>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="video.html">Video</a>
+    <a href="project.html">My Project</a>
+</nav>
+
+<div class="container">
+    <div class="profile-section">
+        <div class="profile-photo">
+            <img src="fotokayrabukber.jpg.png" alt="Foto Profil">
+        </div>
+
+        <div class="profile-text">
+            <h2>Profil Singkat</h2>
+            <p>
+                <i>
+                Halo semuanya perkenalkan nama aku Azkayra Adreena Hanifah. Aku bersekolah di SMPIT Al Haraki Depok. Aku lahir pada tanggal 12 Juni 2011 di Jakarta dan saat ini berusia 15 tahun.
+
+                Aku adalah anak ketiga dari tiga bersaudara, aku mempunyai seorang kakak sebagai yang tertua dan seorang abang sebagai anak kedua dan mereka berdua berkuliah di kampus Universitas Indonesia.
+
+                Tujuan aku bersekolah di sini adalah untuk menambah ilmu, mengembangkan kemampuan diri, meningkatkan kepercayaan diri.
+                </i>
+            </p>
+        </div>
+    </div>
+
+    <div class="content-text">
+        <h2>Tentang Saya</h2>
+        <p>
+            <i>Aku biasanya dipanggil kayra, kalau kata banyak orang aku itu adalah orang yang mudah berteman tetapi juga tidak bisa mengobrol terlalu lama bersama orang yang tidak dekat, entah kenapa aku mudah merasa capai. Aku sangat menyukai musik dan cheesecake aku juga terkadang mengisi waktu luang dengan bermain gitar. Hal yang tidak aku sukai adalah serangga dan juga keramaian. Aku juga mempunyai ketakutan terhadap ketinggian.</i>
+        </p>
+
+        <h2>Minat dan Hobi</h2>
+        <p>
+            <i>Aku memiliki hobi untuk bermain gitar juga menonton film dan aku memiliki minat mempelajari bahasa korea </i>
+        </p>
+
+        <h2>Cita-cita dan Harapan</h2>
+        <p>
+            <i>Cita cita aku adalah menjadi dokter hewan karena aku sangat menyukai hewan terutama mamalia dan harapanku untuk kedepannya dalah menjadi seorang pelajar yang giat belajar, meraih banyak prestasi, masuk ke kampus impian dan dapat membanggakan orangtua.</i>
+        </p>
+
+        <h2>Kesan dan Pesan Selama Kelas IX</h2>
+        <p>
+            <i>
+            Kesan aku selama belajar di kelas IX SMPIT Al Haraki sangat menyenangkan dan penuh pengalaman. Aku mendapatkan banyak ilmu dan teman-teman yang baik.
+
+            Pesan aku, semoga SMPIT Al Haraki semakin maju dan terus memberikan yang terbaik. Terima kasih kepada guru-guru yang telah membimbing aku.
+            </i>
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>Ujian Praktik Terintegrasi | SMPIT Al Haraki | Azkayra Adreena Hanifah</p>
+</footer>
+
+<script>
+    // SCRIPT EMOJI JATUH
+    function createEmoji() {
+        const emojis = ['🍃', '🌸', '🦌', '✨', '🌼'];
+        const emoji = document.createElement('div');
+        emoji.className = 'falling-emoji';
+        emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        
+        emoji.style.left = Math.random() * 100 + 'vw';
+        emoji.style.fontSize = Math.random() * 20 + 10 + 'px';
+        emoji.style.duration = Math.random() * 3 + 2 + 's';
+        emoji.style.animationDuration = emoji.style.duration;
+        emoji.style.opacity = Math.random();
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, parseFloat(emoji.style.duration) * 1000);
+    }
+
+    setInterval(createEmoji, 300);
+</script>
+
+</body>
+</html>

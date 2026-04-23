@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Portofolio | Beranda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-green: #6d8264;
+            --bambi-brown: #d4a373;
+            --soft-cream: #fdfaf5;
+            --vintage-earth: #4a3728;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--soft-cream);
+            margin: 0;
+            color: var(--vintage-earth);
+            overflow-x: hidden;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+                              url('https://www.transparenttextures.com/patterns/dust.png');
+        }
+
+        .falling-emoji {
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            user-select: none;
+            cursor: default;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); }
+        }
+
+        header {
+            background-color: var(--forest-green);
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 25px;
+            position: relative;
+            border-bottom: 10px double #ffffff;
+        }
+
+        .moving-logo {
+            font-size: 50px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: rgba(109, 130, 100, 0.9);
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: 0.4s;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover { color: var(--bambi-brown); }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 50px 0 50px 0;
+            box-shadow: 20px 20px 0px rgba(212, 163, 115, 0.15);
+            border: 1px solid #eee;
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--forest-green);
+            font-size: 2.2em;
+            border-left: 5px solid var(--bambi-brown);
+            padding-left: 15px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 2;
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        p i { color: var(--vintage-earth); font-style: italic; }
+
+        /* --- GRID DUA KOLOM --- */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr; /* Teks kiri, Galeri kanan */
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* --- GALERI DI KANAN DENGAN BENTUK LANDSCAPE --- */
+        .content-gallery {
+            display: flex;
+            flex-direction: column; /* Susun foto ke bawah */
+            gap: 20px;
+        }
+
+        .content-gallery img {
+            width: 100%; 
+            height: 220px; /* Tinggi diset agar box-nya Landscape */
+            object-fit: cover; /* Foto tetap proporsional */
+            border-radius: 20px;
+            filter: brightness(98%) sepia(10%);
+            transition: 0.5s ease;
+            border: 4px solid var(--soft-cream);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+        }
+
+        .content-gallery img:hover {
+            filter: brightness(100%) sepia(0%);
+            transform: scale(1.03);
+        }
+
+        footer {
+            background-color: var(--vintage-earth);
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-top: 5px solid var(--bambi-brown);
+        }
+
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr; /* Jadi satu kolom di layar kecil */
+            }
+            .container { width: 95%; padding: 25px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="moving-logo">🦌</div>
+    <h1>PORTOFOLIO AZKAYRA ADREENA</h1>
+    <p>Karya Nyata dari Proses Belajar</p>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="video.html">Video</a>
+    <a href="project.html">My Project</a>
+</nav>
+
+<div class="container">
+
+    <div class="content-grid">
+
+        <div class="content-text">
+            <h2>Selamat Datang di Website Portofolio</h2>
+            <p>
+                Website ini merupakan media pendukung untuk menampilkan hasil
+                Ujian Praktik Terintegrasi. Konten utama pada website ini adalah
+                video broadcasting pembelajaran yang berisi penyampaian teks
+                argumentasi secara lisan.
+            </p>
+
+            <h2>Tentang Website Ini</h2>
+            <p>
+                Website ini merupakan website portofolio digital yang berisi
+                hasil karya dan pembelajaran saya selama mengikuti Ujian Praktik
+                Terintegrasi.
+            </p>
+
+            <h2>Tujuan Pembuatan Website</h2>
+            <p>
+                Tujuan pembuatan website ini adalah untuk menampilkan karya
+                yang telah saya buat serta melatih kemampuan saya dalam
+                membuat website sederhana menggunakan HTML.
+            </p>
+
+            <h2>Topik Argumentasi dan Alasan Pemilihan</h2>
+            <p>
+                <i>
+                Topik argumentasi yang saya angkat adalah tentang pentingnya menyebarluaskan kegiatan internship curicculum saya memilih topik tersebut karena menurut saya dapat menjadi informasi kepada banyak orang tentang pengalaman saya melaksanakan internship curicculum, menjelaskan sebagaimana pentinngnya kegiatan ini dan menurut saya topik ini sangat menarik karena belum banyak sekolah yang melakukan kegiatan tersebut.
+                </i>
+            </p>
+
+            <h2>Harapan dari Video</h2>
+            <p>
+                <i>
+                Harapan saya untuk yang menonton video saya semoga mereka dapat merasa tertarik terhadap kegiatan internship curicculum yang memiliki banyak bidang dan agar mereka mendapatkan gambaran apa yang akan dilakukan saat kegiatan internship curicculum. Pesan saya adalah jangan mudah menyerah dan bekerja sama-lah dengan baik dengan rekan kerja karena dunia kerja tidak semudah yang terlihat. 
+                </i>
+            </p>
+
+            <h2>Refleksi, Kesan, dan Pesan</h2>
+            <p>
+                <i>
+                Selama mengikuti ujian praktik, saya belajar banyak hal, khususnya dalam membuat teks argumentasi. Saya belajar bagaimana menyusun pendapat secara logis, memberikan alasan yang kuat, serta menyampaikan ide dengan bahasa yang jelas dan mudah dipahami. Selain itu, melalui pembuatan video membaca teks argumentasi, saya juga belajar untuk lebih percaya diri, melatih intonasi, dan cara berbicara di depan kamera dengan baik. Selama belajar di SMPIT Al Haraki, saya mendapatkan banyak pengalaman berharga, baik dalam bidang akademik maupun pembentukan karakter. Saya merasa lingkungan sekolah sangat mendukung untuk belajar dan berkembang, serta para guru yang sabar dalam membimbing siswa.
+                <br><br>
+                Kesan saya selama belajar di SMPIT Al Haraki sangat menyenangkan. Saya mendapatkan banyak teman, pengalaman, dan ilmu yang bermanfaat. Pesan saya, semoga SMPIT Al Haraki terus menjadi sekolah yang baik dan dapat mencetak generasi yang berakhlak baik dan berprestasi.
+                </i>
+            </p>
+        </div>
+
+        <div class="content-gallery">
+            <img src="queenara1.jpg" alt="Gambar Bebas 1">
+            <img src="queennaralandscape.jpg" alt="Gambar Bebas 2">
+            <img src="queennara3.jpg" alt="Gambar Bebas 3">
+            <img src="queennara4.jpg" alt="Gambar Bebas 4">
+            <img src="queennara5.png" alt="Gambar Bebas 5">
+            <img src="queennara7.jpg" alt="Gambar Bebas 6">
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>Ujian Praktik Terintegrasi | SMPIT Al Haraki | Azkayra Adreena Hanifah</p>
+</footer>
+
+<script>
+    function createEmoji() {
+        const emojis = ['🍃', '🌸', '🦌', '✨', '🌼', '☁️'];
+        const emoji = document.createElement('div');
+        emoji.className = 'falling-emoji';
+        emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        
+        emoji.style.left = Math.random() * 100 + 'vw';
+        emoji.style.fontSize = Math.random() * 20 + 10 + 'px';
+        emoji.style.duration = Math.random() * 3 + 2 + 's';
+        emoji.style.animationDuration = emoji.style.duration;
+        emoji.style.opacity = Math.random() * 0.5 + 0.2;
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, parseFloat(emoji.style.duration) * 1000);
+    }
+    setInterval(createEmoji, 300);
+</script>
+
+</body>
+</html>

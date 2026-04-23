@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Portofolio | My Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-green: #6d8264;
+            --bambi-brown: #d4a373;
+            --soft-cream: #fdfaf5;
+            --vintage-earth: #4a3728;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--soft-cream);
+            margin: 0;
+            color: var(--vintage-earth);
+            overflow-x: hidden;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+                              url('https://www.transparenttextures.com/patterns/dust.png');
+        }
+
+        .falling-emoji {
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            user-select: none;
+            cursor: default;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        header {
+            background-color: var(--forest-green);
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 25px;
+            position: relative;
+            border-bottom: 10px double #ffffff;
+        }
+
+        .moving-logo {
+            font-size: 50px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: rgba(109, 130, 100, 0.9);
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: 0.4s;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--bambi-brown);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 50px 0 50px 0;
+            box-shadow: 20px 20px 0px rgba(212, 163, 115, 0.15);
+            border: 1px solid #eee;
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--forest-green);
+            font-size: 2.2em;
+            border-left: 5px solid var(--bambi-brown);
+            padding-left: 15px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 2;
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background-color: var(--soft-cream);
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.4s ease;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(109, 130, 100, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            filter: brightness(90%);
+            transition: 0.4s;
+        }
+
+        .project-card:hover img {
+            filter: brightness(100%);
+        }
+
+        .project-card a {
+            display: block;
+            padding: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--vintage-earth);
+            background-color: #ffffff;
+            transition: 0.3s;
+            font-size: 0.95em;
+        }
+
+        .project-card a:hover {
+            background-color: var(--forest-green);
+            color: #ffffff;
+        }
+
+        /* TAMBAHAN DROPDOWN */
+        .dropdown-project button {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            background-color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--vintage-earth);
+        }
+
+        .dropdown-project button:hover {
+            background-color: var(--forest-green);
+            color: #ffffff;
+        }
+
+        .dropdown-content {
+            display: none;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: var(--vintage-earth);
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--bambi-brown);
+            color: white;
+        }
+
+        footer {
+            background-color: var(--vintage-earth);
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-top: 5px solid var(--bambi-brown);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="moving-logo">🦌</div>
+    <h1>AZKAYRA ADREENA</h1>
+    <p>Karya Nyata dari Proses Belajar</p>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="video.html">Video</a>
+    <a href="project.html">My Project</a>
+</nav>
+
+<div class="container">
+    <h2>My Project</h2>
+
+    <div class="project-grid">
+
+        <!-- project lain tetap -->
+        <div class="project-card">
+            <img src="ic.jpg">
+            <a href="https://youtu.be/RfrlHz_vwDo?si=QE_YW_43dR11aoU_">Video Argumentasi</a>
+        </div>
+
+        <div class="project-card">
+            <img src="project2.png">
+            <a href="index.html">Website Portofolio</a>
+        </div>
+
+        <div class="project-card">
+            <img src="https://i.pinimg.com/1200x/66/79/61/667961103e7365cd58cf0ecfd66f747e.jpg">
+            <a href="#">Game Edukasi</a>
+        </div>
+
+        <!-- BAGIAN DROPDOWN -->
+        <div class="project-card">
+            <img src="queennara5.png">
+            <div class="dropdown-project">
+                <button onclick="toggleDropdown()">Proyek Lainnya</button>
+                <div id="dropdownMenu" class="dropdown-content">
+                    <a href="https://scratch.mit.edu/projects/1310545741">Proyek A</a>
+                    <a href="https://scratch.mit.edu/projects/1310561143">Proyek B</a>
+                    <a href="https://scratch.mit.edu/projects/1310590905">Proyek C</a>
+                    <a href="queennara7.jpg">Proyek D</a>
+                     <a href="queennara4.jpg">Proyek E</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>Ujian Praktik Terintegrasi | SMPIT Al Haraki</p>
+</footer>
+
+<script>
+function toggleDropdown() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>

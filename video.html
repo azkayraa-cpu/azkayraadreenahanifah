@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Portofolio | Video</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-green: #6d8264;
+            --bambi-brown: #d4a373;
+            --soft-cream: #fdfaf5;
+            --vintage-earth: #4a3728;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--soft-cream);
+            margin: 0;
+            color: var(--vintage-earth);
+            overflow-x: hidden;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+                              url('https://www.transparenttextures.com/patterns/dust.png');
+        }
+
+        /* --- ANIMASI EMOJI JATUH --- */
+        .falling-emoji {
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            user-select: none;
+            cursor: default;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        header {
+            background-color: var(--forest-green);
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 25px;
+            position: relative;
+            border-bottom: 10px double #ffffff;
+        }
+
+        /* --- MOVING LOGO --- */
+        .moving-logo {
+            font-size: 50px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: rgba(109, 130, 100, 0.9);
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: 0.4s;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--bambi-brown);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 50px 0 50px 0;
+            box-shadow: 20px 20px 0px rgba(212, 163, 115, 0.15);
+            border: 1px solid #eee;
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--forest-green);
+            font-size: 2.2em;
+            border-left: 5px solid var(--bambi-brown);
+            padding-left: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 2;
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        p i {
+            color: var(--vintage-earth);
+            font-style: italic;
+        }
+
+        /* --- VIDEO BOX --- */
+        .video-box {
+            margin-top: 40px;
+            text-align: center;
+            background-color: var(--soft-cream);
+            padding: 30px;
+            border-radius: 30px;
+            border: 2px dashed var(--bambi-brown);
+        }
+
+        .video-box iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            border: 5px solid #fff;
+        }
+
+        footer {
+            background-color: var(--vintage-earth);
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-top: 5px solid var(--bambi-brown);
+        }
+
+        @media (max-width: 768px) {
+            .container { width: 90%; padding: 25px; }
+            .video-box iframe { height: 250px; }
+            header h1 { font-size: 2.2em; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="moving-logo">🦌</div>
+    <h1>AZKAYRA ADREENA</h1>
+    <p>Karya Nyata dari Proses Belajar</p>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="video.html">Video</a>
+    <a href="project.html">My Project</a>
+</nav>
+
+<div class="container">
+
+    <div class="content-text">
+
+        <h2>Video Argumentasi</h2>
+        <p>
+            <i>
+            Video yang saya buat berisi pembacaan teks argumentasi tentang topik yang saya pilih, yaitu internnship curicculum pada bidang designing di Queen Nara. Dalam video tersebut, saya menyampaikan pendapat saya secara jelas disertai alasan dan penjelasan yang mendukung. Saya berusaha untuk menjelaskan kegiatan internship curicculum dengan bahasa yang mudah dipahami.
+            </i>
+        </p>
+
+        <h2>Topik yang Diangkat</h2>
+        <p>
+            <i>
+            Topik argumentasi yang saya pilih adalah internship curicculum di Queen Nara.
+            </i>
+        </p>
+
+        <h2>Alasan Memilih Topik</h2>
+        <p>
+            <i>
+            Saya memilih topik ini karena menurut saya topik tersebut menarik untuk dibahas dan memiliki banyak hal yang bisa dijadikan bahan argumentasi. Selain itu, topik ini dapat menarik perhatian karena saya merasa bahwa tidak banyak yang melakukan kegiatan internship curicculum di Queen Nara.
+            </i>
+        </p>
+
+        <h2>Pesan dan Harapan</h2>
+        <p>
+            <i>
+            Melalui video ini, saya berharap penonton dapat memahami isi dari argumentasi yang saya sampaikan dan dapat mengambil hal baik dari pembahasan tersebut. Saya juga berharap penonton dapat lebih terbuka dalam menerima pendapat orang lain.
+            </i>
+        </p>
+
+    </div>
+
+    <div class="video-box">
+        <h2>Video Karya Saya</h2>
+        <p><i>Silakan saksikan video dokumentasi saya di bawah ini:</i></p>
+
+        <iframe 
+            src="https://www.youtube.com/embed/RfrlHz_vwDo"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</div>
+
+<footer>
+    <p>Ujian Praktik Terintegrasi | SMPIT Al Haraki | Azkayra Adreena Hanifah</p>
+</footer>
+
+<script>
+    function createEmoji() {
+        const emojis = ['🍃', '🌸', '🦌', '✨', '🌼', '☁️'];
+        const emoji = document.createElement('div');
+        emoji.className = 'falling-emoji';
+        emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        
+        emoji.style.left = Math.random() * 100 + 'vw';
+        emoji.style.fontSize = Math.random() * 20 + 10 + 'px';
+        emoji.style.duration = Math.random() * 3 + 2 + 's';
+        emoji.style.animationDuration = emoji.style.duration;
+        emoji.style.opacity = Math.random() * 0.5 + 0.2;
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, parseFloat(emoji.style.duration) * 1000);
+    }
+
+    setInterval(createEmoji, 300);
+</script>
+
+</body>
+</html>
